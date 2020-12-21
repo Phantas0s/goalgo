@@ -6,7 +6,7 @@ func binary(search int, list []int) bool {
 
 	if search == mid {
 		return true
-	} else if len(list) == 1 {
+	} else if len(list) <= 1 {
 		return false
 	} else if search <= mid {
 		return binary(search, list[:midIndex])

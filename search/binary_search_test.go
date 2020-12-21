@@ -40,8 +40,26 @@ func TestBinary(t *testing.T) {
 			expected: true,
 		},
 		{
-			name:     "Not found",
+			name:     "big numbers",
+			search:   5000,
+			list:     []int{1, 2, 3, 4, 5, 6, 7, 1000, 2000, 5000},
+			expected: true,
+		},
+		{
+			name:     "Not found with 8",
 			search:   8,
+			list:     []int{1, 2, 3, 4, 5, 6, 7},
+			expected: false,
+		},
+		{
+			name:     "Not found with 0",
+			search:   0,
+			list:     []int{1, 2, 3, 4, 5, 6, 7},
+			expected: false,
+		},
+		{
+			name:     "Not found with 1000",
+			search:   1000,
 			list:     []int{1, 2, 3, 4, 5, 6, 7},
 			expected: false,
 		},
