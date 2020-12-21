@@ -39,6 +39,12 @@ func TestBinary(t *testing.T) {
 			list:     []int{1, 2, 3, 4, 5, 6, 7},
 			expected: true,
 		},
+		{
+			name:     "Not found",
+			search:   8,
+			list:     []int{1, 2, 3, 4, 5, 6, 7},
+			expected: false,
+		},
 	}
 
 	for _, tc := range testCases {
